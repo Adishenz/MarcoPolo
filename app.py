@@ -35,8 +35,9 @@ st.set_page_config(**PAGE_CONFIG)
 # App Functions
 
 # Formatting and Styling Functions
-def local_css(file):
-    st.markdown(f'<style>file</style>', unsafe_allow_html=True)
+def local_css(file_name):
+    with open(file_name) as f:
+        st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 def title_html(title):
     title_html = '''
@@ -76,66 +77,8 @@ pysqldf = lambda q : sqldf(q,globals())
 # Main Function
 def main():
     # Loading the CSS styling file
-    style ='''
-    @keyframes animate {
-    from {color: #f63366;}
-    to {color:#fafafa;}
-    }
-
-    /* Page Title */
-    .css-10trblm{
-    color: #fafafa;
-    text-align: center;
-    font-size: 180%;
-    border: #f63366;
-    border-style: solid;
-    border-radius: 25px;
-    border-width: thick;
-    animation: animate;
-    animation-duration: 5s;
-    padding: 10px;
-    }
-
-    .css-1d81imo{
-    color: #f63366;
-    font-size: 130%;
-    padding-bottom: 20px;
-
-    }
-
-    h3.click-me{
-    background-color: #f63366;
-    }
-
-    .stButton>button{
-    align-self: center;
-    }
-
-    .stAlert{
-    text-align: center;
-    }
-
-
-    /* Expander */
-
-
-    .st-dt:hover {
-    color:#fafafa
-
-    }
-
-    .streamlit-expanderHeader{
-    font-size: 140%;
-    color: #f63366;
-    padding-bottom: 25px;
-    }
-
-    .streamlit-expanderHeader:hover {
-    color:#fafafa
-
-    }
-    '''
-    local_css(style)
+    
+    local_css("style.css")
     
     # App Title
     st.title('Marco Polo')
