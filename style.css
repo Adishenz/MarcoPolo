@@ -1,0 +1,58 @@
+@keyframes animate {
+    from {color: #f63366;}
+    to {color:#fafafa;}
+    }
+
+/* Page Title */
+.css-10trblm{
+    color: #fafafa;
+    text-align: center;
+    font-size: 180%;
+    border: #f63366;
+    border-style: solid;
+    border-radius: 25px;
+    border-width: thick;
+    animation: animate;
+    animation-duration: 5s;
+    padding: 10px;
+}
+
+.css-1d81imo{
+    color: #f63366;
+    font-size: 130%;
+    padding-bottom: 20px;
+
+}
+
+h3.click-me{
+    background-color: #f63366;
+}
+
+.stButton>button{
+    align-self: center;
+}
+
+.stAlert{
+    text-align: center;
+}
+
+
+/* Expander */
+
+
+.st-dt:hover {
+    color:#fafafa
+
+}
+
+.streamlit-expanderHeader{
+    font-size: 140%;
+    color: #f63366;
+    padding-bottom: 25px;
+}
+
+.streamlit-expanderHeader:hover {
+    color:#fafafa
+
+}
+
