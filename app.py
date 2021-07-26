@@ -29,7 +29,7 @@ import plotly.graph_objects as go
 
 
 # Page Layout Configuration
-PAGE_CONFIG = {'page_title':'Marco Polo', 'page_icon':'📊','layout':'wide'}
+PAGE_CONFIG = {'page_title':'Marco Polo','layout':'wide'}
 st.set_page_config(**PAGE_CONFIG)
 
 # App Functions
